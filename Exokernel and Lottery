@@ -1,5 +1,11 @@
-Exokernel: An Operating System Architecture for Application-Level Resource Management
-Exokernel proposes a way to improve the inefficient resource management of existing operating systems. The main reason for the inefficient resource management of the existing operating system is that the performance degradation in the way of providing an abstracted operating environment for the program is large. To solve this problem, Exokernel proposes a minimal abstraction method for low level hardware access. In order to prove our proposal, the paper implemented a prototype, and the prototype identify 10-100 times faster kernel speed and 5-40 times faster virtual memory and interprocess communication primitives.
+1. Exokernel: An Operating System Architecture for Application-Level Resource Management
+Exokernel proposes a way to improve the inefficient resource management of existing operating systems. 
+The main reason for the inefficient resource management of the existing operating system is that the performance degradation in the way of providing an abstracted operating environment for the program is large. 
+To solve this problem, Exokernel proposes a minimal abstraction method for low level hardware access. 
+In order to prove our proposal, the paper implemented a prototype, and the prototype identify 10-100 times faster kernel speed and 5-40 times faster virtual memory and interprocess communication primitives.
 
-Lottery Scheduling: Flexible Proportional-Share Resource Management
-In priority based scheduling method, a starvation phenomenon may occur in the case of a process having a low priority, and in fair share scheduling method, overhead due to process transition may occur. This paper introduce the Lottery scheduling method to overcome the problems mentioned above and explain how to implement it efficiently. In detail, Lottery scheduling is configured by granting a ticket to each process and randomly selecting one of the granted tickets to select a process to be performed next.
+2. Lottery Scheduling: Flexible Proportional-Share Resource Management
+In priority based scheduling method, a starvation phenomenon may occur in the case of a process having a low priority.
+And in fair share scheduling method, overhead due to process transition may occur. 
+This paper introduce the Lottery scheduling method to overcome the problems mentioned above and explain how to implement it efficiently. 
+In detail, Lottery scheduling is configured by granting a ticket to each process and randomly selecting one of the granted tickets to select a process to be performed next.
