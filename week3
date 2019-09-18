@@ -1,9 +1,13 @@
 The Linux Scheduler: a Decade of Wasted Cores
 In the scheduler used in Linux, four bugs have been found that do not make efficient use of multicore. 
 As a result of this, certain cores remained idle for a long time even work queue is not empty, and 13-24% of the overall system was wasted. 
-These bugs can be easily detected using the newly designed tools, rather than the existing ones.
+These bugs can be easily detected using the newly designed tools, rather than the existing ones. 
+The paper show detail how they detect the problem and it is strength point. 
+But they didn't announce enough about motivation. More specific motivation is required.
 
 Arachne: Core-Aware Thread Management
-Arachne is a user-level thread management system that can be used without changing the kernel. 
-These kind of user-level thread management system has been tried several times in the past, but Arachne has improved performance through new features, including the ability to estimate the number of cores required for each application to run, and minimizing chche misses. 
+Arachne is a user-level thread management system that can be used without changing the kernel. These kind of user-level thread management system has been tried several times in the past, but Arachne has improved performance through new features, including the ability to estimate the number of cores required for each application to run, and minimizing chche misses. 
 These characteristics enable users to achieve low latency and high throughput by applying Arachne.
+It is interesting to see how the new management approach improves performance. 
+In particular, the method of evaluating its effectiveness through various test results is excellent. 
+I think it's a well written paper.
