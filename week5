@@ -1,0 +1,14 @@
+Power Provisioning for a Warehouse-sized Computer
+In a facility with a large computer infrastructure, estimating the required amount of power is not easy because the amount of power in each device varies.
+In this paper, review and show what kind of characteristic are exist on the power consumption from small computer infrastructure to large computer infrastructure changes in order to manage power usage efficiently. 
+This review confirms that power consumption differences can be up to 40% for large data centers, and that voltage / frequency variable technology within the CPU can help reduce peak power and so on.
+This article deals with the interesting research topics required in the present age. 
+However, there seems to be a lack of explanation as to why the result occurs.
+
+Fine Grained Energy Accounting on Smartphones with Eprof
+Efficient power management is very important for smartphones. 
+This paper introduces eprof, an energy profiler that specifically identifies where power consumption is occurring to help with power management. 
+In the paper, analysis with eprof proved that a significant amount of power consumption is caused by I / O and few routines. 
+This optimization of I / O and routines was applied to test aplication, resulting in a 20-65% reduction in power consumption.
+The paper have done a lot of testing to prove the results. It is preferred point. 
+And the paper explained the opinion easily and well.
