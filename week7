@@ -1,0 +1,13 @@
+Everything you always wanted to know about synchronization but were afraid to ask
+This paper analyzes the contents of synchronization from hardware to software and various architectures.
+These analyzes was based on the multiple synchronization layer and are performed through evaluation of latency and atomic operations performance. 
+For this analysis, they have developed SSYNC, a cross-platform synchronization suite, and they expect SSYNC to be used for future synchronization evaluation.
+This may be due to a lack of relevant background knowledge, but overall, it was difficult to understand. Also lack of motivation was a disadvantage.
+
+Read-Log-Update
+RLU is an abbreviation of read-log-update, which is an extention version of RCU, a technique to reduce workload for lock in multicore environment.
+Existing RCU has the disadvantage of being complicated to use and optimized for few wirters.
+To overcome this problem, the author introduced two versions of the RLU. The implementation is different, but fundamentally these two implementations are based on the logging and coordination mechanism.
+The newly implemented RLU method is configured to be used in a manner similar to the existing RCU method, and the reader-writer lock performance test using the RLU resulted in about 3 times faster results in the 16hardware threads environment.
+They explained efficiently even there's subject was difficult.
+Also, it is positive that it describes an idea that can be applied directly to the kernel. 
