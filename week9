@@ -1,0 +1,17 @@
+An Analysis of Linux Scalability to Many Cores
+To analyzes the scalability of today operating system kernel, seven major applications was tested on a 48-core test device.
+The author have configured a MOSBENCH set for testing to test scalability, and it was shared.
+As a result, the paper concluded that the today kernel is not too hard to provide scalability with just a few changes. 
+However, it is important to note that these results are provided without any bottlenecks caused by I / O.
+It's a disadvantage that the scalability test was based only on MOSBENCH. 
+Also, the premise is disadvantage that there is no bottleneck caused by I / O is necessary.
+Other than that, I think it's a well-organized paper.
+
+The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors
+In general, scalability is measured by using a profiler to measure how much bottlenecks are occurring and how they are performing during the actual workload.
+However, this approach has a complex interface, which makes it difficult to assess any scalability issues.
+To solve this problem, author created a tool called COMMUTER that takes a simplified symbolic implementation as input and evaluates it for scalability.
+Generated 13,664 tests using COMMUTER, It tested on the Linux kernel and the newly developed research kernel (SV6). 
+As a result, we found 4275 scalability issues in the linux kernel and for the SV6, 136 tests confirmed the problem.
+The details of the new tool COMMUTER were described in detail, ensuring the reliability of the test results. Another positive point is the problem of kernel was easy to understand. 
+However, it was a disadvantage that the paper was difficult to understand.
