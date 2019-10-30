@@ -1,0 +1,17 @@
+Traffic Management: A Holistic Approach to Memory Placement on NUMA Systems
+In general, in a multicore system, multiple memory controllers are used, which causes a difference in access speed depending on the relative location of the CPU and memory. 
+Using memory placement algorithms that emphasize these speed differences and localities can create bottlenecks under certain conditions.
+To solve this problem, the authors introduced a new algorithm called Carrefour1 that observes the entire flow of data and improves memory placement. 
+When the algorithm is applied, there is a performance improvement of up to 3.6 times, and the performance degradation is only 4% or less even when the algorithm is not applicable.
+I think the paper picked suitable subject because CPU cores gradually increase and memory controllers also increase. 
+The paper attached various results to help evaluate the superiority of the newly designed Carrefour1 algorithm. Good job!
+
+Regularities Considered Harmful: Forcing Randomness to Memory Accesses to Reduce Row Buffer Conflicts for Multi-Core, Multi-Bank Systems
+
+In recent multi-core systems, there is a problem with performance degradation due to in memory row-buffer conflicts.
+This problem was generally regarded as an architecture problem, but the author tried to solve it by operating system-based solution called M3.
+The M3 solves the problems mentioned above by allocating page frames to cores in different banks as possible, and randomizing memory accesses.
+Tested on Intel Xeon 16 cores and 32GB DRAM systems, the paper show an average of 40% and up to 85% performance improvement.
+I think moving the solving method from the hardware architecture to the operating system's memory management scheme is a very creative approach. 
+But the evaluation based only one testing machine was negative point.
+
