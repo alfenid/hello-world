@@ -1,0 +1,14 @@
+Efficient Virtual Memory for Big Memory Servers
+In systems with large (virtual) memory, excution cycles for memory address translation operations have been found to consume as much resources as 51% under certain conditions.
+The reason for using such a large amount of resources is that TLB misses are the main cause, and to solve this problem, the paper proposes hardware that helps to directly map the virtual addresses used by the process to segments rather than pages.
+The assessment has shown that mapping directly to segments reduces the time wasted by TLB misses to less than 0.5% of the total.
+In this paper, the problem of large size virtual memory explained easily.
+However, it seems that there is not enough evalation data on the method they proposed. 
+I think their claims can be accepted when they test more on diverse conditions and systems.
+
+Coordinated and Efficient Huge Page Management with Ingens
+As memory size continues to grow, the workload required for memory address mapping is increasing.
+Currently, hardware manufacture dealing this problem using increased cache buffer called TLB, but to solve this problem fundamentally, the operating system must use TLB effectively.
+The authors try to solve this problem with that prototype version of memory manager called Ingens.
+The validation resulted in approximately 40% latency reduction, reduced unused space due to memory fragmentation (69% 0-> 0.8%), and fair page allocation.
+In this paper, we are looking to improve from the existing memory mapping to a new prototype memory manager. I think there is no shortage in evaluating the results, but I think that more detailed data should be presented in terms of implementation.
