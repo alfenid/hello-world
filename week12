@@ -1,0 +1,15 @@
+All File Systems Are Not Created Equal
+Some applications, such as DBMS and Key value store, need to provide crash consistent property.
+Since all I / O to disk is passed through the file system, the file system must also support the same attributes in order to crash consistently.
+In this paper, checked the atomicity of a job and the order of its progress in order to verify that the current file system can support the property.
+To this end, they developed a tool called BOB that can trace block-level operation on disk and an analysis tool that can check crash consistency at the application level, and analyzed 6 file systems.
+As a result, a total of 60 vulnerabilities were found in 11 applications, some of which could lead to data loss.
+In this paper, it is interesting to systematically analyze the file system to identify the vulnerability of file system configuration at the row level.
+There were no particular disadvantages found in the paper.
+
+TxFS: Leveraging File-System Crash Consistency to Provide ACID Transactions
+As we saw in the previous paper, some applications must provide crash consistent, but the approach to doing this is not only complex but also includes some bugs.
+To solve this problem in this paper, developed and tested a file system that guarantees ACID using filesystem journal.
+The file system, named TxFS, was tested with applications such as SQLite and Git, resulting in better crash semantics and improved performance (1.6 times SQLite, 2.3 times benchmark).
+TxFS introduced in this paper can be regarded as a kind of transactional file system. There are various reasons why such a file system was unsuccessful, and there is a lack of specific explanation of what the problem is and why it is safe in TxFS.
+In addition, the test focused on performance evaluation, and it seems to me that there is a lack of explanation on the part verifying that the IO was intact.
