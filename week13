@@ -1,0 +1,13 @@
+Ceph: A Scalable, High-Performance Distributed File System
+Existing distributed file storage systems have problems of limited scalability from distributed design or performance degradation from centralized  design.
+To solve this problem, this paper proposes a new file system named Ceph.
+Ceph is a file system built on the assumption that it will run on a petabyte scale system. It is characterized by removing file allocation tables and separating metadata and data operations.
+In addition, it provides excellent scalability by applying highly adaptive distributed metadata cluster architecture.
+The authors provide an evaluation of performance and scalability to demonstrate Ceph's excellence, but the content is difficult for first-time readers of this paper. It is a disadvantage that this paper will have difficulty evaluating whether the claim is clear.
+
+Barrier-Enabled IO Stack for Flash Storage
+In order to perform an enforcing a storage order in Flash storage, another researchers are research to apply an algorithm based on Transfer-and Flush, which consumed a lot of resources.
+To solve this problem, the paper suggest a Barrier-enabled IO stack that can call the next request even before the previous one is completed.
+The Barrier-enabled IO stack is implemented based on the EXT4 file system, a modification to the fsync () function, and dual-mode journaling with fbarrier () and fdatabarrier.
+This implementation allows applications to control storage order virtually without flush overhead, DMA transfer overhead, and much less journal commit latency. Experiments on MYSQL and SQLite show a file system with Barrier-Enabled IO Stack, about 43x and 73x faster than EXT4.
+The downside is that it is too difficult to understand the content of the paper as a whole, but it seems very valuable in that it can be useful for designing faster file systems.
