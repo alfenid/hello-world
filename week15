@@ -1,0 +1,16 @@
+IRON FILE SYSTEMS
+In this paper, IRON (Internal RObustNess) system which includes failure detection and recovery technology was created for file systems and applied to commercial file systems such as ext3 and ReiserFS.
+The results showed that these file systems did not store duplicate information and there were some inadequate examples of how to recover from a disk failure.
+The authors proposed a low-level redundancy technique and a small amount of redundancy to solve this problem, and to correct the disk failure.
+In my opinion, most interesting thing is the changes made to the data and the parity block are updated at the same time.
+This approach was applied to ext3, and as a result, they found that the disk errors were corrected in most cases, with a performance drop of 1-11% for daily use and 51% for benchmarks that focused on write testing. Found.
+This paper contains very detailed information related to the research. So I think it is well-written paper.
+
+Analysis and Evolution of Journaling File Systems
+To analyze and evaluate recently used journaling-based file systems, the authors developed two approaches. 
+The first is Semantic block-level analysis (SBA), which infers the behavior of a file system from the data structures and traces remaining on disk.
+Another approach is semantic trace playback (STP) implemented as a user level process. It was implemented to complement the SBA. In this method, traces IO on disk using inputed trace.
+The authors use these methods to confirm that some design decisions in ext3 and ReiserFS work inefficiently. 
+In addition, several bugs were found, and it was reported to the develop group of file system to fix  in subsequent releases.
+In this paper, they researched areas that were used in many fields but were not analyzed effectively. In other words, I think the research topic itself is good. 
+The materials that support it are also easy to understand and detailed, so I enjoyed reading the paper.
