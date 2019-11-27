@@ -1,0 +1,20 @@
+mClock: Handling Throughput Variability for Hypervisor IO Scheduling
+Today's Hypervisor offers a variety of options for allocating CPU and memory for virtual environment configuration, but IO-related resources can only be allocated on a fairly limited basis. 
+Especially in situations where there is a change in capacity over a short period of time, it is currently not possible to provide control.
+To solve this problem, in this paper, created a new IO scheduler algorithm for hypervisor named mClock. 
+mClock is a scheduler algorithm that has been changed to freely allocate IO-related resources. 
+Based on the hypervisor used in VMware EXS, they created prototype hypervisor using mClock and evaluated that.
+The evaluation method was divided into several parts. 
+Among the most realistic evaluations, Filebench Workloads showed that the OLTP workload, which was reduced to 250 IOPS in the conventional method, was improved to 500 IOPS in mClock.
+In this paper, detailed algorithm about mClock is introduced, but it is difficult to prove the validity of the paper because the implemented result by the algorithm is not disclosed. 
+This will need to be addressed for further discussion.
+
+FlashFQ: A Fair Queueing I/O Scheduler for Flash-Based SSDs
+The existing timeslice-based I / O scheduler suffers from low responsiveness when a large number of tasks are performed simultaneously. 
+This is especially true for Flash-Based SSDs, which have different read and write times.
+To solve this problem, this paper presents a new I / O Scheduler called FlashFQ. 
+FlashFQ use the advantage what the Flash-Based SSDs hasn't disadvantage from randomized data access, unlike mechanical DISK. 
+It also uses throttled dispatch to improve performance with the queueing scheduler.
+This study confirms that FlashFQ achieves fairness and at the same time shows similar or better performance than other I / O Schedulers.
+This paper has the advantage that Motivation is well presented. 
+But, when compare to other approaches, it would have been better if they discussed about why the fairness is important.
